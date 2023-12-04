@@ -31,7 +31,7 @@ Therefore in this example:
 
 If we compare Random Forest to a single Decision Tree, there are several key hyperparameters that are different or unique to Random Forests. These hyperparameters help in controlling the behavior of the Random Forest model.
 
- #### Number of Trees (n_estimators): 
+ ** Number of Trees (n_estimators): **
      * This is perhaps the most important hyperparameter for a Random Forest. It specifies the number of trees in the forest. More trees usually mean better performance but also longer training time.
 
 ####  Bootstrap Samples (bootstrap):
