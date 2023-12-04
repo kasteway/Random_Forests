@@ -6,7 +6,7 @@
 
 In machine learning, a "Random Forest" is like a large group of these friends, where each friend (or small decision tree) looks at the data (like restaurant options) and makes a decision (or prediction). However, instead of each friend deciding on their own, they all vote, and the restaurant with the most votes is chosen.
 
-So, a Random Forest is a collection of many decision trees. Each tree makes its own prediction, and the final output of the Random Forest is decided based on the majority vote of all these trees. This makes the Random Forest a strong and reliable method in machine learning because it combines the decisions of many different models, reducing the chance of making a poor decision based on just one model's view.
+So, a Random Forest is a collection of many decision trees. Each tree makes its own prediction, and the final output of the Random Forest is decided based on the majority vote of all these trees for Classification & the average for Regression. This makes the Random Forest a strong and reliable method in machine learning because it combines the decisions of many different models, reducing the chance of making a poor decision based on just one model's view.
 
 Therefore in this example:
 
@@ -34,21 +34,21 @@ If we compare Random Forest to a single Decision Tree, there are several key hyp
  **Number of Trees (n_estimators -> Default = 100):**
     This is perhaps the most important hyperparameter for a Random Forest. It specifies the number of trees in the forest. More trees usually mean better performance but also longer training time.
 
-**Bootstrap Samples (bootstrap):**
-     This parameter decides whether or not to use bootstrap sampling when building trees. Bootstrap sampling means randomly selecting a subset of the data with replacement for training each tree. This is typically set to   `true in Random Forests.
-
-**Maximum Features (max_features):**
+**Maximum Features (max_features  -> Default = 'auto'):**
    This parameter determines the maximum number of features that are considered for splitting a node. It can be set as a number, a percentage, or different heuristics like 'sqrt' or 'log2'. In a single Decision Tree,  usually, all features are considered for splitting a node, but in a Random Forest, limiting the number of features can lead to more diverse trees and reduce overfitting.
 Recommend: Start with sqrt(number of features) then use a grid search for other possible values
 
-**Out-of-Bag Error (oob_score):**
-     This is a method for estimating the generalization accuracy of the Random Forest. It uses the bootstrap samples not included in the training of each tree (the 'out-of-bag' samples) to estimate the model's performance.   This is unique to     Random Forests and isn't a concept in a single Decision Tree.
+**Bootstrap Samples (bootstrap -> Default =TRUE):**
+     This parameter decides whether or not to use bootstrap sampling when building trees. Bootstrap sampling means randomly selecting a subset of the data(rows from the data) with replacement for training each tree. This means, we are taking a subset of the features & a subset of the rows of data AKA Bootstrapped. This helps reduce correlation betwen trees because each tree is trained on a different subset of features and rows of data.
 
-**Minimum Samples for Splitting (min_samples_split):**
-    While this is also a hyperparameter for Decision Trees, it often plays a more crucial role in Random Forests because it affects each tree in the forest and thus has a compounded effect.
+**Out-of-Bag Error (oob_score -> Default =FALSE):**
+     This is a method for estimating the generalization accuracy of the Random Forest. It uses the bootstrap samples not included in the training of each tree (the 'out-of-bag' samples) to estimate the model's performance. This is unique to     Random Forests and isn't a concept in a single Decision Tree.
 
-**Minimum Samples for a Leaf Node (min_samples_leaf):**
-    Similar to min_samples_split, this parameter can have a more pronounced effect in Random Forests.
+**Minimum Samples for Splitting (min_samples_split -> Default =2):**
+    While this is also a hyperparameter for Decision Trees, it often plays a more crucial role in Random Forests because it affects each tree in the forest and thus has a compounded effect. This means that a node will be split if it contains 2 or more samples.
+
+**Minimum Samples for a Leaf Node (min_samples_leaf -> Default =1):**
+    This setting allows each leaf node to have as few as 1 sample.
  
 
 ---
