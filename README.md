@@ -31,23 +31,23 @@ Therefore in this example:
 
 If we compare Random Forest to a single Decision Tree, there are several key hyperparameters that are different or unique to Random Forests. These hyperparameters help in controlling the behavior of the Random Forest model.
 
- **Number of Trees (n_estimators):**
+ **Number of Trees (n_estimators -> Default = 100):**
     This is perhaps the most important hyperparameter for a Random Forest. It specifies the number of trees in the forest. More trees usually mean better performance but also longer training time.
 
-####  Bootstrap Samples (bootstrap):
+**Bootstrap Samples (bootstrap):**
      This parameter decides whether or not to use bootstrap sampling when building trees. Bootstrap sampling means randomly selecting a subset of the data with replacement for training each tree. This is typically set to   `true in Random Forests.
 
-####  Maximum Features (max_features):
-   This parameter determines the maximum number of features that are considered for splitting a node. It can be set as a number, a percentage, or different heuristics like 'sqrt' or 'log2'. In a single Decision Tree, 
-      usually, all features are considered for splitting a node, but in a Random Forest, limiting the number of features can lead to more diverse trees and reduce overfitting.
+**Maximum Features (max_features):**
+   This parameter determines the maximum number of features that are considered for splitting a node. It can be set as a number, a percentage, or different heuristics like 'sqrt' or 'log2'. In a single Decision Tree,  usually, all features are considered for splitting a node, but in a Random Forest, limiting the number of features can lead to more diverse trees and reduce overfitting.
+Recommend: Start with sqrt(number of features) then use a grid search for other possible values
 
-####  Out-of-Bag Error (oob_score):
+**Out-of-Bag Error (oob_score):**
      This is a method for estimating the generalization accuracy of the Random Forest. It uses the bootstrap samples not included in the training of each tree (the 'out-of-bag' samples) to estimate the model's performance.   This is unique to     Random Forests and isn't a concept in a single Decision Tree.
 
-####  Minimum Samples for Splitting (min_samples_split):
+**Minimum Samples for Splitting (min_samples_split):**
     While this is also a hyperparameter for Decision Trees, it often plays a more crucial role in Random Forests because it affects each tree in the forest and thus has a compounded effect.
 
-####  Minimum Samples for a Leaf Node (min_samples_leaf):
+**Minimum Samples for a Leaf Node (min_samples_leaf):**
     Similar to min_samples_split, this parameter can have a more pronounced effect in Random Forests.
  
 
