@@ -34,7 +34,7 @@ If we compare Random Forest to a single Decision Tree, there are several key hyp
  **Number of Trees (n_estimators -> Default = 100):**
     This is perhaps the most important hyperparameter for a Random Forest. It specifies the number of trees in the forest. More trees usually mean better performance but also longer training time and chance of overfitting grows.
 
-**Maximum Features (max_features  -> Default = 'auto'):**
+**Maximum Features (max_features  --> Default = 'auto'):**
    This parameter determines the maximum number of features that are considered for splitting a node. It can be set as a number, a percentage, or different heuristics like 'sqrt' or 'log2'. In a single Decision Tree,  usually, all features are considered for splitting a node, but in a Random Forest, limiting the number of features can lead to more diverse trees and reduce overfitting.
 Recommend: Start with sqrt(number of features) then use a grid search for other possible values
 
