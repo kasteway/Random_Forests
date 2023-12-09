@@ -1,5 +1,5 @@
 # Random_Forests
-*** sklearn.ensemble.RandomForestClassifier
+*** from sklearn.ensemble import RandomForestClassifier
 
 ### Summary:
 
