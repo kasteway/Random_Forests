@@ -32,14 +32,14 @@ Therefore in this example:
 If we compare Random Forest to a single Decision Tree, there are several key hyperparameters that are different or unique to Random Forests. These hyperparameters help in controlling the behavior of the Random Forest model.
 
  **Number of Trees (n_estimators -> Default = 100):**
-    This is perhaps the most important hyperparameter for a Random Forest. It specifies the number of trees in the forest. More trees usually mean better performance but also longer training time.
+    This is perhaps the most important hyperparameter for a Random Forest. It specifies the number of trees in the forest. More trees usually mean better performance but also longer training time and chance of overfitting grows.
 
 **Maximum Features (max_features  -> Default = 'auto'):**
    This parameter determines the maximum number of features that are considered for splitting a node. It can be set as a number, a percentage, or different heuristics like 'sqrt' or 'log2'. In a single Decision Tree,  usually, all features are considered for splitting a node, but in a Random Forest, limiting the number of features can lead to more diverse trees and reduce overfitting.
 Recommend: Start with sqrt(number of features) then use a grid search for other possible values
 
-**Bootstrap Samples (bootstrap -> Default =TRUE):**
-     This parameter decides whether or not to use bootstrap sampling when building trees. Bootstrap sampling means randomly selecting a subset of the data(rows from the data) with replacement for training each tree. This means, we are taking a subset of the features & a subset of the rows of data AKA Bootstrapped. This helps reduce correlation betwen trees because each tree is trained on a different subset of features and rows of data.
+**Bootstrap Samples[data rows] (bootstrap -> Default =TRUE):**
+     This parameter decides whether or not to use bootstrap sampling when building trees. Bootstrap sampling means randomly selecting a subset of the data(rows from the data) with replacement for training each tree. This means, we are taking a subset of the features & a subset of the rows of data AKA Bootstrapped. This helps reduce correlation betwen trees because each tree is trained on a different subset rows of data & features which will likely better generalize.
 
 **Out-of-Bag Error (oob_score -> Default =FALSE):**
      This is a method for estimating the generalization accuracy of the Random Forest. It uses the bootstrap samples not included in the training of each tree (the 'out-of-bag' samples) to estimate the model's performance. This is unique to     Random Forests and isn't a concept in a single Decision Tree.
