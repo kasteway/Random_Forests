@@ -42,7 +42,7 @@ Recommend: Start with sqrt(number of features) then use a grid search for other 
      This parameter decides whether or not to use bootstrap sampling when building trees. Bootstrap sampling means randomly selecting a subset of the data(rows from the data) with replacement for training each tree. This means, we are taking a subset of the features & a subset of the rows of data AKA Bootstrapped. This helps reduce correlation betwen trees because each tree is trained on a different subset rows of data & features which will likely better generalize.
 
 **Out-of-Bag Error (oob_score -> Default =FALSE):**
-     This is a method for estimating the generalization accuracy of the Random Forest. It uses the bootstrap samples not included in the training of each tree (the 'out-of-bag' samples) to estimate the model's performance. This is unique to     Random Forests and isn't a concept in a single Decision Tree.
+     This is a method for estimating the generalization accuracy of the Random Forest. It uses the bootstrap samples not included in the training of each tree (the 'out-of-bag' samples) to estimate the model's performance. This is unique to     Random Forests and isn't a concept in a single Decision Tree. This will not impact the trees and only provides a way to measure the performance of the trees on the untrained data set similar to train/test split.
 
 **Minimum Samples for Splitting (min_samples_split -> Default =2):**
     While this is also a hyperparameter for Decision Trees, it often plays a more crucial role in Random Forests because it affects each tree in the forest and thus has a compounded effect. This means that a node will be split if it contains 2 or more samples.
