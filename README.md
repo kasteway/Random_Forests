@@ -9,7 +9,7 @@ In machine learning, a "Random Forest" is like a large group of these friends, w
 Therefore in this example:
 | Who & What                  | Random Forest     |
 |-----------------------------|-------------------|
-| Each Person                 | Decision Tree     |
+| Groups of friends           | Decision Tree     |
 | Restaurants                 | Predictions       |
 
 So, a Random Forest is a collection of many decision trees. Each tree makes its own prediction, and the final output of the Random Forest is decided based on the majority vote of all these trees for Classification & the average for Regression. This makes the Random Forest a strong and reliable method in machine learning because it combines the decisions of many different models, reducing the chance of making a poor decision based on just one model's view.
