@@ -15,15 +15,15 @@ Therefore in this example:
 So, a Random Forest is a collection of many decision trees. Each tree makes its own prediction, and the final output of the Random Forest is decided based on the majority vote of all these trees for Classification & the average for Regression. This makes the Random Forest a strong and reliable method in machine learning because it combines the decisions of many different models, reducing the chance of making a poor decision based on just one model's view.
 
 
-**is one of the most popular and most powerful machine learning algorithms**
-**can be used for both Regression & Classification**
-**Random Forest better than normal single decision trees. However, Gradient Boosting outperforms Random Forest**
-**Feature Importance - Which features appear most frequently in the decision tree root nodes**
-**Does both Bootstrapping(randomly selecting a subset of the data(rows from the data) with replacement for training each tree) & Feature Bagging(Train each tree on a random, different sample of features)**
+- **is one of the most popular and most powerful machine learning algorithms**
+- **can be used for both Regression & Classification**
+- **Random Forest better than normal single decision trees. However, Gradient Boosting outperforms Random Forest**
+- **Feature Importance - Which features appear most frequently in the decision tree root nodes**
+- **Does both Bootstrapping(randomly selecting a subset of the data(rows from the data) with replacement for training each tree) & Feature Bagging(Train each tree on a random, different sample of features)**
 - is a special type of bagging ensemble incorperating a technique called RANDOM SUBSPACE method or FEATURE BAGGING to construct very different trees 
-**Therefore, not all features will appear in all trees, which de-correlates the decision trees, helps prevent over focusing on certain features with high predicitve power**
-**This allows for other features to have a greater opportunity to influence the decision trees**
-**This also means these other features can influence the model predictions**
+- **Therefore, not all features will appear in all trees, which de-correlates the decision trees, helps prevent over focusing on certain features with high predicitve power**
+- **This allows for other features to have a greater opportunity to influence the decision trees**
+- **This also means these other features can influence the model predictions**
 
 
 
@@ -48,6 +48,7 @@ So, a Random Forest is a collection of many decision trees. Each tree makes its 
 - Other models may have better benchmarks
 
 
+---
 
 ### How to Tune:
 
