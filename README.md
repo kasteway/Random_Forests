@@ -33,19 +33,19 @@ So, a Random Forest is a collection of many decision trees. Each tree makes its 
 
 ### Advantages & Disadvantages:
 
-**Advantages:**
--Handles any data type, as well as missing data
--No scaling required
--Few hyperparameters to tune
--Handles curse of dimensionality
--Fast to train
--Well Suited for parallelization
+#### Advantages:
+- Handles any data type, as well as missing data
+- No scaling required
+- Few hyperparameters to tune
+- Handles curse of dimensionality
+- Fast to train
+- Well Suited for parallelization
 
 
-**Disadvantages:**
--Less interpretable than decsion trees - Black Box
--Not as effective at reducing bias
--Other models may have better benchmarks
+#### Disadvantages:
+- Less interpretable than decsion trees - Black Box
+- Not as effective at reducing bias
+- Other models may have better benchmarks
 
 
 
