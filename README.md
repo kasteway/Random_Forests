@@ -146,4 +146,4 @@ The following tools were used in this project:
                   
                   
 2.	SKLearn to implement various classification models.
-3.	Matplotlib and Seaborn to visualize the data and model outputs...
+3.	Matplotlib and Seaborn to visualize the data and model outputs.
